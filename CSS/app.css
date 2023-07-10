@@ -333,6 +333,8 @@
     align-items: center;
 }
 
+
+
 @media (max-width:500px){
 
     .rowt1{
@@ -386,5 +388,221 @@
     }
 
 
+
+}
+
+
+
+@keyframes bounce {
+    0%,100% { transform: translateY(0);}
+    50% {transform: translateY(-120px);}
+}
+
+
+.col25:hover , .col75:hover{
+    background-color: green;
+    transform: rotate(36000000deg);
+
+    transition: background-color 2s, transform 2s;
+}
+
+.col75:hover{
+    transform: translateY(150px);
+    background-color: black;
+    transition: background-color 2s, transform 2s;
+}
+
+.row70:hover{
+    /*background-color: white;
+    transition: background-color 3s;*/
+    animation: bounce 0.5s infinite;
+
+}
+
+
+.col25:hover , .col75:hover ,.col35:hover ,.col65:hover ,.col10:hover ,.col20:hover ,.col30:hover ,.col40:hover,.row70:hover ,.row30:hover {
+    animation: bounce 1s infinite;
+}
+
+
+@keyframes visitAround {
+    0%,100% { transform: translateY(0);}
+    25% {transform: translateY(150px);}
+    50% {transform: translateY(150px) translateX(150px);}
+    75% {transform: translateX(150px);}
+}
+
+@keyframes sixgen {
+    0%,100% { transform: translateY(0) translateX(0);}
+    15% {transform: translateX(100px);}
+    30% {transform: translateX(150px) translateY(50px);}
+    45% {transform: translateX(100px) translateY(100px);}
+    60% {transform: translateX(0px) translateY(100px);}
+    75% {transform: translateX(-50px) translateY(50px);}
+}
+.Container h1:hover{
+    animation: bounce 0.5s infinite;
+
+}
+
+
+.flexContainer h1:hover{
+    animation: sixgen 5s infinite;
+}
+
+
+
+.grid-item {
+    background-color: #e9e9e9;
+    padding: 20px;
+    text-align: center;
+  }
+
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: 4fr 3fr 2fr 3fr 1fr;
+    grid-template-rows: repeat(1, minmax(10px, 1fr));
+    grid-gap: 20px;
+  }
+
+
+  .grid1{
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 1fr 3fr 6fr;
+    grid-template-rows:5fr 3fr 2fr
+    grid-gap: 20px;
+  }
+
+  .grid2{
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 8fr 4fr 5fr 3fr;
+    grid-template-rows: repeat(1, minmax(10px, 1fr));
+    grid-gap: 20px;
+  }
+
+  .grid3{
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 1fr 2fr 3fr 4fr 5fr 85fr;
+    grid-template-rows: repeat(1, minmax(10px, 1fr));
+    grid-gap: 20px;
+  }
+
+  .circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: blue;
+    position: relative;
+  }
+
+  .circle:hover {
+    animation: moveCircle 2s linear infinite;
+  }
+
+  @keyframes moveCircle {
+    0% {
+      transform: rotate(0deg) translateX(100px) rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg) translateX(100px) rotate(-360deg);
+    }
+  }
+  
+
+
+
+
+
+.grid-container5 {
+    display: grid;
+    grid-template-areas:
+        "b d a"
+        "b c c"
+        "b c c";
+    grid-gap: 20px;
+}
+
+.a {
+    grid-area: a;
+}
+
+.b {
+    grid-area: b;
+}
+
+.c {
+    grid-area: c;
+}
+
+.d {
+    grid-area: d;
+}
+
+.e {
+    grid-area: e;
+}
+
+.f {
+    grid-area: f;
+}
+
+.g {
+    grid-area: g;
+}
+
+
+.grid-container6 {
+    margin-top: 77px;
+    display:grid;
+    grid-template-areas:
+    "a a a a a"
+    "b b b b b"
+    "c c c e e"
+    "f f f d d"
+    "f f f d d";
+    grid-gap: 20px;
+}
+
+.grid-container7 {
+    margin-top: 77px;
+    display:grid;
+    grid-template-areas:
+    "a c c c b"
+    "a e e f b"
+    "a e e f b"
+    "a e e f b"
+    "a d d d b";
+    grid-gap: 20px;
+}
+
+.grid-container8 {
+    margin-top: 77px;
+    display:grid;
+    grid-template-areas:
+    "f f c c c e e e"
+    "d d d d d a a b";
+    grid-gap: 20px;
+}
+
+
+.grid-container9 {
+    margin-top: 77px;
+    display:grid;
+    grid-template-areas:
+    "e d c f g"
+    "e d c f g"
+    "e d c f g"
+    "e b b b g"
+    "a a a a a";
+    grid-gap: 20px;
+}
+
+
+.grid-item:hover{
+    animation: bounce 0.5s infinite;
 
 }

@@ -1,0 +1,219 @@
+.tahaoren {
+  background-color: red;
+  justify-content: center;
+  display: flex;
+  font-size: 26px;
+  font-size: 2.5;
+}
+
+.burak {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: red;
+  color: blue;
+}
+
+.zeki {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+}
+.zeki .taha {
+  color: yellow;
+}
+.zeki .taha .mete {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: blue;
+}
+.zeki .taha .mete .ali {
+  background-color: aqua;
+}
+.zeki .taha .mete .omer {
+  background-color: purple;
+}
+
+.class1, .class3, .class2 {
+  background-color: white;
+  display: flex;
+}
+
+.book, .combine {
+  background-color: green;
+}
+
+.device, .combine {
+  color: brown;
+}
+
+.ifElseClass {
+  background-color: aqua;
+}
+
+ul li:nth-child(1) {
+  background-color: #e60000;
+}
+ul li:nth-child(2) {
+  background-color: #cc0000;
+}
+ul li:nth-child(3) {
+  background-color: #b30000;
+}
+ul li:nth-child(4) {
+  background-color: #990000;
+}
+ul li:nth-child(5) {
+  background-color: maroon;
+}
+
+ul #item-1 {
+  background-color: #e60000;
+}
+ul #item-2 {
+  background-color: #cc0000;
+}
+ul #item-3 {
+  background-color: #b30000;
+}
+ul #item-4 {
+  background-color: #990000;
+}
+ul #item-5 {
+  background-color: maroon;
+}
+
+/*1 den 20 ye for loop acsin i degeri ciftse backcolor yesil degilse beyaz olsun*/
+.scss-1 {
+  background-color: white;
+}
+
+.scss-2 {
+  background-color: green;
+}
+
+.scss-3 {
+  background-color: white;
+}
+
+.scss-4 {
+  background-color: green;
+}
+
+.scss-5 {
+  background-color: white;
+}
+
+.scss-6 {
+  background-color: green;
+}
+
+.scss-7 {
+  background-color: white;
+}
+
+.scss-8 {
+  background-color: green;
+}
+
+.scss-9 {
+  background-color: white;
+}
+
+.scss-10 {
+  background-color: green;
+}
+
+.scss-11 {
+  background-color: white;
+}
+
+.scss-12 {
+  background-color: green;
+}
+
+.scss-13 {
+  background-color: white;
+}
+
+.scss-14 {
+  background-color: green;
+}
+
+.scss-15 {
+  background-color: white;
+}
+
+.scss-16 {
+  background-color: green;
+}
+
+.scss-17 {
+  background-color: white;
+}
+
+.scss-18 {
+  background-color: green;
+}
+
+.scss-19 {
+  background-color: white;
+}
+
+.scss-20 {
+  background-color: green;
+}
+
+/*mixin tanimla daha sonra bu mixini for loopla 5 tane classa koy
+    burak-1 burak-2 burak-3
+*/
+.burak-0, .randomClass .burak-5, .randomClass .burak-4, .randomClass .burak-3, .randomClass .burak-2, .randomClass .burak-1 {
+  color: gray;
+  font-size: 12px;
+}
+
+/*
+2 adet mixin tanimla 
+
+2 ayri classta bu mixinleri include et
+
+1 tane class acip iki classi da extend et
+
+*/
+.burakclass1, .burakclass3 {
+  color: tan;
+  font-size: 15px;
+}
+
+.burakclass2, .burakclass3 {
+  color: green;
+  font-size: 10px;
+}
+
+/*
+2 class ac
+
+if else kullan bir sekilde
+
+o durumlara gore classa css ata
+
+*/
+.cl1 {
+  background-color: #FF0000;
+}
+
+.cl2 {
+  background-color: aqua;
+}
+
+/*
+
+npm install -g sass
+sass input.scss output.css
+sass --watch input.scss:output.css
+
+*/
+
+/*# sourceMappingURL=output.css.map */

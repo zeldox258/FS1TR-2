@@ -1,0 +1,263 @@
+@use "sass:math";
+@import 'variables';
+
+
+@mixin redFlag {
+    background-color: red;
+    justify-content: center;
+    display: flex;
+    font-size: 26px;
+}
+
+
+@mixin flexContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+@function calcRem($pixel){
+    @return math.div($pixel, 16);
+}
+
+
+
+
+
+
+.tahaoren {
+    @include redFlag;
+    font-size: calcRem(40);
+}
+
+.burak{
+    @include flexContainer;
+    background-color: red;
+    color: blue;
+}
+
+.zeki{
+    @include flexContainer;
+    background-color: $burak-color;
+    .taha{
+        color: yellow;
+        .mete{
+            @include flexContainer;
+            background-color: blue;
+            .ali{
+                background-color: aqua;
+            }
+            .omer{
+                background-color: purple;
+            }
+        }
+    }
+}
+
+
+
+
+.class1{
+    background-color: white;
+    display: flex;
+}
+
+.class2{
+    @extend .class1;
+}
+
+.class3{
+    @extend .class1;
+}
+
+@mixin greenbook{
+    background-color: green;
+}
+
+
+@mixin browndevice{
+    color: brown;
+}
+
+.book {
+    @include greenbook
+}
+
+.device {
+    @include browndevice
+}
+
+.combine{
+    @extend .book,.device;
+}
+
+
+$trueValue: false;
+
+
+.ifElseClass{
+    @if 5 < 3{
+        background-color: red;
+    }
+    @else{
+        background-color: aqua;
+    }
+}
+
+
+$list-length:5;
+
+
+ul{
+
+    @for $i from 1 through $list-length{
+        li:nth-child(#{$i}) {
+            background-color: darken(#FF0000, 5% * $i);
+        }
+    }
+
+}
+
+
+
+
+ul{
+
+    @for $i from 1 through $list-length{
+        $id: "item-#{$i}";
+
+        ##{$id}{
+            background-color: darken(#FF0000, 5% * $i);
+        }
+
+    }
+
+}
+
+
+
+
+
+
+
+/*1 den 20 ye for loop acsin i degeri ciftse backcolor yesil degilse beyaz olsun*/
+//20 tane .scss-1 .scss-2 .scss-3
+@for $i from 1 through 20{
+
+    $id: "scss-#{$i}";
+    .#{$id}{
+        @if $i%2 == 0{
+            background-color: green;
+        }
+        @else{
+            background-color: white;
+        }
+    }
+}
+    
+
+/*mixin tanimla daha sonra bu mixini for loopla 5 tane classa koy
+    burak-1 burak-2 burak-3
+*/
+
+
+//mixin decleration
+@mixin burakMixin {
+    //istedigini yazabilirsin icine :D
+    color:gray;
+    font-size: 12px;
+}
+.burak-0{
+    @include burakMixin;
+}
+.randomClass{ 
+
+    @for $i from 1 through 5{
+        $id: "burak-#{$i}";
+        .#{$id}{
+            //mixini include ediceksin
+            //@include burakMixin;
+            @extend .burak-0;
+        }
+    }
+    
+}
+
+
+
+
+
+
+
+/*
+2 adet mixin tanimla 
+
+2 ayri classta bu mixinleri include et
+
+1 tane class acip iki classi da extend et
+
+*/
+
+@mixin mixin1 {
+
+    color: tan;
+    font-size: 15px;
+} 
+
+@mixin mixin2 {
+    color: green;
+    font-size: 10px;
+}
+
+.burakclass1{
+//buralarda include et
+    @include mixin1;
+}
+.burakclass2{
+    @include mixin2;
+}
+
+
+.burakclass3{
+    //burada da digerlerini extendle
+    @extend .burakclass1, .burakclass2;
+    
+}
+
+/*
+2 class ac
+
+if else kullan bir sekilde
+
+o durumlara gore classa css ata
+
+*/
+
+
+.cl1{
+    @if 5>3 {
+        background-color: #FF0000;
+    }
+    @else{
+        background-color: aqua;
+    }
+}
+
+
+.cl2{
+    @if 5<3 {
+        background-color: #FF0000;
+    }
+    @else{
+        background-color: aqua;
+    }
+}
+
+/*
+
+npm install -g sass
+sass input.scss output.css
+sass --watch input.scss:output.css
+
+*/
