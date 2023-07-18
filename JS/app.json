@@ -1,0 +1,49 @@
+{
+    "settings": {
+       "requestOrigin": 2,
+       "status": 2,
+       "body": {
+          "configs": {
+             "settings": {
+                "GameData": {
+                   "timeConfig": {
+                      "startDay": 7,
+                      "endDay": 20,
+                      "oneDaySec": 750
+                   },
+                   "auctionConfig": {
+                      "rareCarRatio": 0.05000000074505806
+                   },
+                   "startCash": 7500,
+                   "taxConfig": {
+                      "carTaxRatio": 2
+                   },
+                   "topSpeedConfig": {
+                      "entryPrice": 30
+                   },
+                   "employeeConfig": {
+                      "defWalkSpeed": 1.2,
+                      "skillWalkSpeed": 1.7,
+                      "spongeSpeed": 0.01,
+                      "washMachineSpeed": 0.05
+                   }
+                }
+             }
+          },
+          "metadata": {
+             "configAssignmentHash": "10f37c996c7cb82d449d882dbe05ed17318a7d1d",
+             "assignmentId": "99faee27-d889-449c-9828-659c628f3e6d",
+             "environmentId": "f1cc5f61-b99b-4841-b649-eb606293f9dd"
+          }
+       },
+       "headers": {
+          "Date": "Tue, 27 Jun 2023 09:53:54 GMT",
+          "Content-Type": "application/json;charset=utf-8",
+          "Access-Control-Allow-Origin": "*",
+          "Content-Length": "532",
+          "Server": "Jetty(9.4.z-SNAPSHOT)",
+          "Via": "1.1 google",
+          "Alt-Svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
+       }
+    }
+ }
