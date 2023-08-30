@@ -2,6 +2,7 @@ import './App.css';
 import React, {Component} from 'react';
 
 import Burak from './Burak';
+import Person from './Person';
 
 class App extends React.Component {
 
@@ -9,6 +10,12 @@ class App extends React.Component {
     super(props);
     this.state = { counter: 0 };
 
+  }
+
+  async componentDidMount() {
+    const response = await fetch('https://jsonplaceholder.typicode.com/posts');
+    const data = await response.json();
+    console.log(data);
   }
 
   increaseCounter = () => {
@@ -32,11 +39,11 @@ class App extends React.Component {
 
           <button onClick={this.increaseCounter}> Click Me </button>
 
-          <Burak/>
-          <Burak/>
-          <Burak/>
-          <Burak/>
-          <Burak/>
+          <Person name="Taha"  startValue={5} region = "East Anatolia" age = {22} />
+          <Person name="Burak" startValue={15} region = "west" age = {23} />
+          <Person />
+
+
 
 
         </header>
